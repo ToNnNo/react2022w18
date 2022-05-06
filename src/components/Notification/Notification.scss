@@ -1,0 +1,10 @@
+$blue: rgb(12, 85, 211);
+$white: white;
+
+.alert-info {
+    border: 1px solid $blue;
+    background-color: lighten($blue, 15%);
+    color: $white;
+    border-radius: 3px;
+    padding: 10px;
+}

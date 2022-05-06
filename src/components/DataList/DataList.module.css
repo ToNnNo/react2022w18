@@ -1,0 +1,19 @@
+.dl {
+    
+}
+
+.dl > dt {
+    font-weight: bold;
+    width: 100px;
+    float: left;
+}
+
+.dl > dt::after {
+    content: ': ';
+    clear: both;
+}
+
+.dl > dt, 
+.dl > dd {
+    margin-bottom: 5px;
+}

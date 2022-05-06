@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import Main from "./router/Main";
+import Nav from "./router/Nav";
+import { useSelector } from 'react-redux';
+import { countSelector } from "./features/counter/counterSlice";
 
 function App() {
+  const counter = useSelector( countSelector );
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className="container">
+      <header>
+        <h1>Formation React { counter.value }</h1>
       </header>
+      <Nav />
+      <main>
+        <Main />
+      </main>
+      <footer>
+        <hr />
+        <p className="text-center">
+          React - Dawan Lille + FOAD - Mai 2022
+        </p>
+      </footer>
     </div>
   );
 }
